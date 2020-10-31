@@ -1,0 +1,34 @@
+@name 
+@inputs TotalTime IsDone 
+@outputs StartTime StopTime
+@persist First Second Third
+@trigger 
+runOnChat(1)
+
+if(chatClk(owner()))  
+{  
+    if(owner():lastSaid() == "!start")  
+    {  
+        print("Starting...")
+         StopTime = 0
+        StartTime = 1
+        First = 0
+    Second = 0
+    Third = 0
+       
+    }  
+     
+   
+   
+    
+}
+
+       
+
+ if(IsDone==0 && StartTime == 1)
+    {  
+        StartTime = 0
+         StopTime = 1
+        print(TotalTime)
+        
+    }  
